@@ -1,0 +1,197 @@
+% Document class and basic packages
+\documentclass[a4paper]{article}
+
+% Essential packages
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{longtable}
+
+% Document settings
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+% Custom commands
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex}
+
+\newcommand{\area}[2]{
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder}{
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header}[1]{
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer}[3]{
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact}[3]{
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {\textbullet}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses}[4]{
+    \textbf{#1} #2 \textbullet\ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school}[4]{
+    \textbf{#1} #2 \textbullet\ #3\\
+    #4 \\
+}
+
+% Begin document
+\begin{document}
+    \vspace*{-40pt}
+
+    % Header section
+    \vspace*{-2pt}
+    \begin{center}
+        {\Huge \scshape {Bruno Roberto Santos}}\\
+        \vspace*{2pt}
+        \ {Full-Stack Software Engineer}\\
+        \vspace*{2pt}
+        \href{mailto:contato@brunorobertosantos.com.br}{contato@brunorobertosantos.com.br} | \href{tel:+5535910236179}{+55 (35) 91023-6179} | Alfenas, Brazil\\
+        \vspace*{4pt}
+        \textbf{\href{https://www.linkedin.com/in/rsbruno/}{LinkedIn | }}\textbf{\href{https://github.com/rsbruno}{GitHub | }}\textbf{\href{https://brunorobertosantos.com.br/}{Portfolio}}\\
+    \end{center}
+
+    % Summary section
+    \header{Summary}
+    \vspace{2mm}
+Full-stack software engineer with 5+ years of experience. I spent nearly 3 years as an active member of a 40+ person squad at GlobalSys (Grupo \'Aguia Branca, Lets project), and I currently work full-stack at Inteli and on client projects at Bitway, where I architected legacy system migrations to modern stacks, reaching up to 100 SEO and 90+ performance on Lighthouse. I've also built frontend functionality for a Brazilian Federal Government platform. I'm part of a partner program with \textbf{Anthropic} and \textbf{OpenAI}, where I'm training to teach applied AI courses.
+    \vspace{2mm}
+
+    % Experience section
+    \header{Experience}
+    \vspace{2mm}
+
+    \textbf{Bitway}\textbf{ | Software Engineer (Mid/Senior)} \hfill  Jun 2023 - Present\\
+    \textbf{Inteli}\textbf{ | Full-Stack Software Engineer (Mid/Senior)} \hfill  Feb 2026 - Present\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Work as a full-stack developer on Inteli's academic system (React, Node.js/Express, AWS Lambda, Aurora/MySQL).
+        \item Owned the \textbf{exchange program module} for the university, from design to implementation.
+        \item Owned the design and implementation of the \textbf{student restrictions and support ticket module}, the service I currently work on.
+    \end{itemize}
+
+    \textbf{Bitway}\textbf{ | Software Engineer (Mid)} \hfill  Jun 2023 - Present\\
+    \textbf{Trocafone}\textbf{ | Full-Stack Software Engineer (Mid)}  \hfill  Oct 2025 - Jul 2026\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Architected the migration of a legacy PHP/Laravel system to \textbf{Next.js} on Trocaf\'acil, reaching \textbf{100 SEO / 90 performance / 91 accessibility} on Lighthouse (public at trocafacil.trocafone.com.br).
+    \end{itemize}
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Led the modernization of a PHP+Angular system to \textbf{Vite.js + TanStack Router/Query} (Partners System), including an AI-based IMEI detection feature.
+        \item Designed and architected \textbf{2 internal products} (Integr8 and Polly) from scratch in React + TypeScript + Tailwind, at the direct request of the company's CEO and CFO.
+    \end{itemize}
+
+    \textbf{GlobalSys}\textbf{ | Software Engineer (Mid)} \hfill  Jun 2023 - Mar 2026\\
+    \textbf{Grupo \'Aguia Branca}\textbf{ | Software Engineer (Mid)}\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Worked for \textbf{nearly 3 years} as an active member of the \textbf{Lets project} team, on a squad of \textbf{40+ people}, from development through Go Live and ongoing maintenance.
+        \item Delivered \textbf{hundreds} of bug fixes, code smell resolutions, and SonarQube issue fixes throughout the project, sustaining continuous quality on a large-scale codebase.
+        \item Contributed to standardizing reusable components published in the project's core library, and took part in designing the migration from monolith to \textbf{microfrontend} (Module Federation).
+    \end{itemize}
+
+    \textbf{Pumpkin Tech}\textbf{ | Jr./Mid Developer} \hfill  Oct 2021 - Jun 2023\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Migrated Pastejo from CRA/JS to TypeScript, unlocking an architecture that was previously unscalable, and built a KML uploader that imported \textbf{1,000+ areas}, enabling large Mato Grosso farms to onboard their data.
+        \item Removed the dependency on the Google Maps API by building a custom map tile server on \textbf{EC2} with offline caching, enabling field map usage without internet access.
+        \item Independently led the \textbf{Android and iOS} offline-first app (WatermelonDB), bringing the solution to ranchers in the field.
+        \item Built the frontend for a \textbf{Brazilian Federal Government} platform (SIRENE), with a custom onboarding flow built with zero external library dependencies.
+        \item Delivered a full-stack solution (Next.js, PostgreSQL) for a real estate system (Bravo), acting as troubleshooter on a legacy project.
+    \end{itemize}
+
+    % Projects section
+    \header{Projects}
+    \vspace{2mm}
+
+    \textbf{Medical Clinic Management Application}\hfill  2026 (in progress)\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Designed the backend architecture in \textbf{Node.js/NestJS} with CQRS, Redis caching, and PostgreSQL, plus a React frontend with the full \textbf{TanStack} ecosystem (Table, Query, Router).
+        \item Integrated \textbf{4 AWS/third-party services} (Amazon Cognito, Amazon SES, \textbf{Amplify}, and Stripe) for authentication, email, deployment, and payments, using \textbf{EC2 Spot} instances for the development environment.
+    \end{itemize}
+
+    \textbf{Lefandom}\textbf{ | E-commerce} \hfill  2026 (in progress)\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Designed the backend architecture in \textbf{Node.js/NestJS} and a React frontend with \textbf{TanStack}, integrating \textbf{Mercado Pago} for payments.
+        \item Led, in alignment with the client, the migration of the store from a Next.js template connected to the Nuvemshop platform (which had performance and flexibility pain points) to a \textbf{custom-built application}, with launch expected within days.
+        \item Reached \textbf{99 performance / 89 accessibility / 100 SEO} on Lighthouse (Jul/2026).
+    \end{itemize}
+
+    \textbf{Personal Portfolio}\hfill  2026 \textbullet\ brunorobertosantos.com.br\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Built in \textbf{2 days} using Astro, a deliberate choice to avoid overengineering a simple site.
+    \end{itemize}
+
+    \textbf{Boa Pedida Delivery}\textbf{ | Freelance, Multi-Platform App} \hfill  2020\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Designed the full architecture (React Native mobile, React web, Node.js/Express/Knex backend) of a local delivery marketplace, with \textbf{3 integrated layers} and Firebase push notifications.
+        \item Delivered the app published on \textbf{both stores} (Android and iOS), launching the system successfully right at the start of the pandemic.
+    \end{itemize}
+
+    \textbf{Dr. Adriano Macedo Laboratory}\textbf{ | Freelance, System + Landing Page} \hfill  2019\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Designed a lab results system with \textbf{2 access profiles} (ASP.NET MVC, Entity Framework) and automatic email notifications.
+        \item Set up a custom domain and hosting; the system stayed in production for \textbf{2-3 years} after launch.
+    \end{itemize}
+
+    \vspace{1mm}
+
+    % Skills section
+    \header{Skills}
+    \vspace{2mm}
+    \begin{longtable}{p{4cm}p{12cm}}
+        Languages: & TypeScript, JavaScript, C\# \\
+        Frontend: & React, Next.js, React Native, Vue, TanStack (Query/Router/Table), Tailwind, Vite, SASS \\
+        Backend: & Node.js, Express, NestJS, CQRS architecture, PHP/Laravel (legacy) \\
+        Architecture: & Microfrontend (Module Federation), legacy system migration, offline-first \\
+        Data: & PostgreSQL, MySQL/Aurora, Redis, WatermelonDB \\
+        Cloud \& DevOps: & AWS (Lambda, EC2/EC2 Spot, RDS/Aurora, Amplify, Cognito, SES), Firebase/Firestore, Docker \\
+        Integrations: & Stripe, Mercado Pago, Google Maps API, applied AI (OpenAI, Anthropic/Claude) \\
+    \end{longtable}
+    \vspace{1mm}
+
+    % Education section
+    \header{Education}
+    \vspace{2mm}
+    \textbf{Universidade Federal de Alfenas (UNIFAL/MG)}\hfill Alfenas, Brazil\\
+    B.Sc. in Computer Science \hfill 2025 (completed)\\
+
+\end{document}

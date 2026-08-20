@@ -1,0 +1,197 @@
+% Document class and basic packages
+\documentclass[a4paper]{article}
+
+% Essential packages
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{longtable}
+
+% Document settings
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+% Custom commands
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex}
+
+\newcommand{\area}[2]{
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder}{
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header}[1]{
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer}[3]{
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact}[3]{
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {\textbullet}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses}[4]{
+    \textbf{#1} #2 \textbullet\ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school}[4]{
+    \textbf{#1} #2 \textbullet\ #3\\
+    #4 \\
+}
+
+% Begin document
+\begin{document}
+    \vspace*{-40pt}
+
+    % Header section
+    \vspace*{-2pt}
+    \begin{center}
+        {\Huge \scshape {Bruno Roberto Santos}}\\
+        \vspace*{2pt}
+        \ {Engenheiro de Software (Full-Stack)}\\
+        \vspace*{2pt}
+        \href{mailto:contato@brunorobertosantos.com.br}{contato@brunorobertosantos.com.br} | \href{tel:+5535910236179}{(35) 91023-6179} | Alfenas/MG\\
+        \vspace*{4pt}
+        \textbf{\href{https://www.linkedin.com/in/rsbruno/}{LinkedIn | }}\textbf{\href{https://github.com/rsbruno}{GitHub | }}\textbf{\href{https://brunorobertosantos.com.br/}{Portf\'olio}}\\
+    \end{center}
+
+    % Summary section
+    \header{Resumo}
+    \vspace{2mm}
+Sou engenheiro de software full-stack com 5+ anos de experi\^encia. Atuei por quase 3 anos como membro ativo de squad de 40+ pessoas na GlobalSys (Grupo \'Aguia Branca, Projeto Lets), e hoje sigo fullstack no Inteli e em projetos de cliente na Bitway, onde arquitetei migra\c{c}\~oes de sistemas legados para stacks modernas atingindo at\'e 100 SEO e 90+ desempenho no Lighthouse. Já desenvolvi funcionalidade de frontend para uma plataforma do Governo Federal. Fa\c{c}o parte de um programa de parceiros com \textbf{Anthropic} e \textbf{OpenAI}, onde estudo para me aperfei\c{c}oar e desenvolver aplica\c{c}\~oes que utilizam IA.
+    \vspace{2mm}
+
+    % Experience section
+    \header{Experi\^encia}
+    \vspace{2mm}
+
+    \textbf{Bitway}\textbf{ | Engenheiro de Software (Pleno/S\^enior)} \hfill  Jun 2023 - Atual\\
+    \textbf{Inteli}\textbf{ | Engenheiro de Software Fullstack (Pleno/S\^enior)} \hfill  Fev 2026 - Atual\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Atuo como desenvolvedor fullstack no sistema acad\^emico do Inteli (React, Node.js/Express, AWS Lambda, Aurora/MySQL).
+        \item Fui respons\'avel por criar o \textbf{m\'odulo de interc\^ambio} da faculdade, do projeto \`a implementa\c{c}\~ao.
+        \item Fui respons\'avel por projetar e implementar o \textbf{m\'odulo de restri\c{c}\~oes de alunos e abertura de chamados}, servi\c{c}o em que atuo atualmente.
+    \end{itemize}
+
+    \textbf{Bitway}\textbf{ | Engenheiro de Software (Pleno)} \hfill  Jun 2023 - Atual\\
+    \textbf{Trocafone}\textbf{ | Engenheiro de Software Fullstack (Pleno)}  \hfill  Out 2025 - Jul 2026\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Arquitetei a migra\c{c}\~ao de sistema legado PHP/Laravel para \textbf{Next.js} no Trocaf\'acil, alcan\c{c}ando \textbf{100 SEO / 90 desempenho / 91 acessibilidade} no Lighthouse (p\'ublico em trocafacil.trocafone.com.br).
+    \end{itemize}
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Liderei a moderniza\c{c}\~ao de sistema PHP+Angular para \textbf{Vite.js + TanStack Router/Query} (Sistema de Parceiros), incluindo feature de detec\c{c}\~ao de IMEI por IA.
+        \item Projetei e arquitetei do zero \textbf{2 produtos internos} (Integr8 e Polly) em React + TypeScript + Tailwind, a pedido direto de CEO e CFO da empresa.
+    \end{itemize}
+
+    \textbf{GlobalSys}\textbf{ | Engenheiro de Software (Pleno)} \hfill  Jun 2023 - Mar 2026\\
+    \textbf{Grupo \'Aguia Branca}\textbf{ | Engenheiro de Software (Pleno)}\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Atuei por \textbf{quase 3 anos} como membro ativo do time do \textbf{Projeto Lets}, em squad de \textbf{40+ pessoas}, do desenvolvimento ao Go Live e sustenta\c{c}\~ao cont\'inua.
+        \item Entreguei \textbf{centenas} de corre\c{c}\~oes de bugs, code smells e issues de SonarQube ao longo do projeto, sustentando qualidade cont\'inua em base de c\'odigo de larga escala.
+        \item Contribu\'i para padroniza\c{c}\~ao de componentes reutiliz\'aveis publicados no core/biblioteca do projeto e participei da concep\c{c}\~ao da migra\c{c}\~ao de mon\'olito para \textbf{microfrontend} (Module Federation).
+    \end{itemize}
+
+    \textbf{Pumpkin Tech}\textbf{ | Desenvolvedor Jr./Pleno} \hfill  Out 2021 - Jun 2023\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Migrei o Pastejo de CRA/JS para TypeScript, destravando arquitetura antes n\~ao escal\'avel, e desenvolvi uploader de KML que importou \textbf{1.000+ \'areas} de plantio e reservas, viabilizando a carga de grandes fazendas do Mato Grosso.
+        \item Eliminei a depend\^encia da API do Google Maps criando servidor pr\'oprio de tiles em \textbf{EC2} com cache offline, permitindo uso de mapas em campo sem internet.
+        \item Liderei sozinho, de forma aut\^onoma, o app \textbf{Android e iOS} offline-first (WatermelonDB), levando a solu\c{c}\~ao ao alcance de pecuaristas no meio do campo.
+        \item Desenvolvi frontend para plataforma do \textbf{Governo Federal} (SIRENE), com onboarding 100\% livre de depend\^encias externas.
+        \item Entreguei solu\c{c}\~ao fullstack (Next.js, PostgreSQL) para sistema imobili\'ario (Bravo), atuando como troubleshooter em projeto legado.
+    \end{itemize}
+
+    % Projects section
+    \header{Projetos}
+    \vspace{2mm}
+
+    \textbf{Aplica\c{c}\~ao de Gerenciamento de Cl\'inicas M\'edicas}\hfill  2026 (em andamento)\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Projetei a arquitetura backend em \textbf{Node.js/NestJS} com CQRS, cache em Redis e PostgreSQL, e frontend em React com todo o ecossistema \textbf{TanStack} (Table, Query, Router).
+        \item Integrei \textbf{4 servi\c{c}os AWS/terceiros} (Amazon Cognito, Amazon SES, \textbf{Amplify} e Stripe) para autentica\c{c}\~ao, e-mail, deploy e pagamentos, usando inst\^ancias \textbf{EC2 Spot} para ambiente de desenvolvimento.
+    \end{itemize}
+
+    \textbf{Lefandom}\textbf{ | E-commerce} \hfill  2026 (em andamento)\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Projetei a arquitetura backend em \textbf{Node.js/NestJS} e frontend em React com \textbf{TanStack}, integrando \textbf{Mercado Pago} para pagamentos.
+        \item Liderei, em alinhamento com o cliente, a migra\c{c}\~ao da loja de um template Next.js conectado \`a plataforma Nuvemshop (que apresentava dores de performance e autonomia) para uma \textbf{aplica\c{c}\~ao pr\'opria}, com lan\c{c}amento previsto em poucos dias.
+        \item Atingi \textbf{99 desempenho / 89 acessibilidade / 100 SEO} no Lighthouse (jul/2026).
+    \end{itemize}
+
+    \textbf{Portf\'olio Pessoal}\hfill  2026 \textbullet\ brunorobertosantos.com.br\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Desenvolvi em \textbf{2 dias} usando Astro, escolha deliberada para evitar overengineering em site simples.
+    \end{itemize}
+
+    \textbf{Boa Pedida Delivery}\textbf{ | Freelancer, App Multiplataforma} \hfill  2020\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Projetei a arquitetura completa (mobile React Native, web React, backend Node.js/Express/Knex) de um marketplace de delivery local, com \textbf{3 camadas} integradas e push notifications via Firebase.
+        \item Entreguei o app publicado nas \textbf{2 lojas} (Android e iOS), colocando o sistema no ar com sucesso t\'ecnico logo no in\'icio da pandemia.
+    \end{itemize}
+
+    \textbf{Laborat\'orio Dr. Adriano Macedo}\textbf{ | Freelancer, Sistema + Landing Page} \hfill  2019\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Projetei sistema de resultados de exames com \textbf{2 perfis de acesso} (ASP.NET MVC, Entity Framework) e notifica\c{c}\~ao autom\'atica por e-mail.
+        \item Configurei dom\'inio e hospedagem pr\'oprios; o sistema ficou em produ\c{c}\~ao por \textbf{2-3 anos} ap\'os o lan\c{c}amento.
+    \end{itemize}
+
+    \vspace{1mm}
+
+    % Skills section
+    \header{Habilidades}
+    \vspace{2mm}
+    \begin{longtable}{p{4cm}p{12cm}}
+        Linguagens: & TypeScript, JavaScript, C\# \\
+        Frontend: & React, Next.js, React Native, Vue, TanStack (Query/Router/Table), Tailwind, Vite, SASS \\
+        Backend: & Node.js, Express, NestJS, arquitetura CQRS, PHP/Laravel (legado) \\
+        Arquitetura: & Microfrontend (Module Federation), migra\c{c}\~ao de sistemas legados, offline-first \\
+        Dados: & PostgreSQL, MySQL/Aurora, Redis, WatermelonDB \\
+        Cloud \& DevOps: & AWS (Lambda, EC2/EC2 Spot, RDS/Aurora, Amplify, Cognito, SES), Firebase/Firestore, Docker \\
+        Integra\c{c}\~oes: & Stripe, Mercado Pago, Google Maps API, IA aplicada (OpenAI, Anthropic/Claude) \\
+    \end{longtable}
+    \vspace{1mm}
+
+    % Education section
+    \header{Forma\c{c}\~ao}
+    \vspace{2mm}
+    \textbf{Universidade Federal de Alfenas (UNIFAL/MG)}\hfill Alfenas, Brasil\\
+    Bacharelado em Ci\^encia da Computa\c{c}\~ao \hfill 2025 (conclu\'ida)\\
+
+\end{document}
