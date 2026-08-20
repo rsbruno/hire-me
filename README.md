@@ -1,4 +1,8 @@
+<div align="center">
+
 # CV — Bruno Roberto Santos
+
+<img src="profile/me.png" alt="Bruno Roberto Santos" width="160" />
 
 Currículo em LaTeX, disponível em português e inglês, compilado em PDF.
 
@@ -46,6 +50,10 @@ Atuei quase 3 anos em squad de 40+ pessoas na GlobalSys (Grupo Águia Branca, Pr
 
 Bacharelado em Ciência da Computação — Universidade Federal de Alfenas (UNIFAL/MG), 2025.
 
+</div>
+
+<div align="right">
+
 ## Estrutura do repositório
 
 ```
@@ -67,3 +75,5 @@ Ou, com `latexmk` (recompila e limpa builds incompletos automaticamente):
 ```bash
 latexmk -pdf CV-Bruno_Roberto_Santos.tex
 ```
+
+</div>
