@@ -1,10 +1,10 @@
 <div align="center">
 
-# CV — Bruno Roberto Santos
+# Bruno Roberto Santos
 
 <img src="profile/me.png" alt="Bruno Roberto Santos" width="160" />
 
-Currículo em LaTeX, disponível em português e inglês, compilado em PDF.
+Currículo em LaTeX, disponível em português e inglês.
 
 **Engenheiro de Software (Full-Stack)** com 5+ anos de experiência em React, Next.js, Node.js/NestJS e migração de sistemas legados para stacks modernas.
 
@@ -52,7 +52,7 @@ Bacharelado em Ciência da Computação — Universidade Federal de Alfenas (UNI
 
 </div>
 
-<div align="right">
+<div align="left">
 
 ## Estrutura do repositório
 
